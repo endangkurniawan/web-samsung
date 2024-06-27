@@ -3,6 +3,7 @@ Layout: Example
 ========================================================================== */
 
 .header {
+  $h: &;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,6 +47,11 @@ Layout: Example
       @include font-size(label);
       color: color(black);
       font-weight: bold;
+      border-radius: 16px;
+      &:hover {
+        background-color: color(black);
+        color: color(white);
+      }
     }
 
     &__right {
@@ -65,6 +71,7 @@ Layout: Example
       display: inline-flex;
       align-items: center;
       height: 100%;
+      position: relative;
     }
 
     &__link {
@@ -73,19 +80,37 @@ Layout: Example
       @include font-size(label);
       font-weight: bold;
       color: color(black);
+      border-radius: 16px;
+      cursor: pointer;
+      &:hover {
+        background-color: color(black);
+        color: color(white);
+      }
     }
   }
 
   &__dropdown {
-    // display: none;
+    // visibility: hidden;
+    overflow: hidden;
     position: fixed;
     top: 56px;
     left: 0;
     padding-top: 24px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: grey;
+    background-color: color(white);
     display: flex;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      background-color: color(black);
+      height: 1px;
+      position: absolute;
+      top: 24px;
+      opacity: 0.7;
+    }
 
     &__box {
       padding: 8px 0 32px 0;
@@ -95,8 +120,6 @@ Layout: Example
       display: inline-flex;
       justify-content: flex-start;
       align-items: center;
-      position: relative;
-      top: -20px;
       width: 224px;
       padding: 8px 24px 9px 24px;
       @include font-size(label-title);
@@ -111,13 +134,21 @@ Layout: Example
 
     &__link {
       display: inline-block;
-      position: relative;
-      top: -20px;
       width: 224px;
       padding: 8px 24px;
       @include font-size(small);
       color: color(black);
       text-decoration: none;
+    }
+
+    &__featured {
+      #{$h}__dropdown__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: -6px 14px;
+      }
     }
   }
 
