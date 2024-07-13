@@ -14,6 +14,7 @@ Layout: Example
   .container {
     height: 100%;
   }
+
   &__wrapper {
     padding: 0 16px;
     height: 100%;
@@ -29,7 +30,7 @@ Layout: Example
     flex-shrink: 0;
   }
 
-  &__menu {
+  .header__menu {
     height: 100%;
     display: flex;
     flex-grow: 1;
@@ -48,6 +49,7 @@ Layout: Example
       color: color(black);
       font-weight: bold;
       border-radius: 16px;
+      cursor: pointer;
       &:hover {
         background-color: color(black);
         color: color(white);
@@ -72,14 +74,46 @@ Layout: Example
       align-items: center;
       height: 100%;
       position: relative;
-
+      &:hover {
+        #{$h}__dropdown {
+          visibility: visible;
+          max-height: 800px;
+          opacity: 1;
+          transform: translateY(0);
+          & > * {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+          }
+        }
+      }
       &:nth-child(1) {
         #{$h}__dropdown {
-          left: -50px;
+          left: -24px;
         }
       }
 
-      &:nth-child(2) {
+      &:nth-child(3) {
+        #{$h}__dropdown {
+          left: -86px;
+        }
+      }
+      &:nth-child(4) {
+        #{$h}__dropdown {
+          left: -286px;
+        }
+      }
+      &:nth-child(5) {
+        #{$h}__dropdown {
+          left: -356px;
+        }
+      }
+      &:nth-child(6) {
+        #{$h}__dropdown {
+          left: -86px;
+        }
+      }
+      &:nth-child(7) {
         #{$h}__dropdown {
           left: 0;
         }
@@ -99,19 +133,26 @@ Layout: Example
         color: color(white);
       }
     }
+    &__right {
+      #{$h}__dropdown {
+        left: -664px !important;
+      }
+    }
   }
 
   &__dropdown {
-    // visibility: hidden;
+    visibility: hidden;
     overflow: hidden;
     position: absolute;
     top: 56px;
     left: 0;
     padding-top: 24px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
     background-color: color(white);
     display: flex;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 
     &::before {
       content: "";
@@ -122,6 +163,12 @@ Layout: Example
       position: absolute;
       top: 24px;
       opacity: 0.7;
+    }
+
+    & > * {
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s; // Add delay here
     }
 
     &__box {
@@ -136,6 +183,7 @@ Layout: Example
       padding: 8px 24px 9px 24px;
       @include font-size(label-title);
       color: color(black);
+      margin: 0;
     }
 
     &__list {
@@ -152,46 +200,52 @@ Layout: Example
       @include font-size(small);
       color: color(black);
       text-decoration: none;
+      &:hover {
+        font-weight: bold;
+      }
     }
 
     &__featured {
-      background-color: beige;
-      // max-width: 30%;
       &__list {
-        // display: flex;
-        // justify-content: flex-start;
-        // align-items: flex-start;
-        // flex-wrap: wrap;
-        // margin: -6px 14px;
-        // max-width: 30%;
-        // background-color: red;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         margin: 0;
         padding: 0;
         list-style: none;
         font-size: 0;
         min-width: 672px;
       }
-      &__pic {
-        display: inline-block;
-        vertical-align: middle;
+
+      &__item {
         width: 33.3333333%;
-        // flex: 0 0 32%;
-        background-color: blue;
+        padding: 8px 12px;
       }
 
       &__box {
-        padding: 28px 12px 12px;
-        border-radius: 24px;
+        padding: 28px 12px 12px 12px;
+        border-radius: 20px;
         margin-bottom: 4px;
         background-color: #f8f8f8;
         position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
+
       &__link {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
+      }
+
+      & img {
+        width: 84px;
+        height: 68px;
+        margin-bottom: 16px;
       }
     }
   }
@@ -215,6 +269,7 @@ Layout: Example
       }
     }
   }
+
   .burger-menu {
     display: none;
   }
