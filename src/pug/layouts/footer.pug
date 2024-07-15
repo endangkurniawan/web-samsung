@@ -47,6 +47,7 @@
               ul.footer__menu
                 each item in section.items
                   li.footer__menu__item
+                    ='\n'
                     a.footer__menu__link(href="#")
                       | #{item}
             if section.subItems
@@ -56,5 +57,28 @@
                 ul.footer__menu
                   each subItem in section.subItems.items
                     li.footer__menu__item
+                      ='\n'
                       a.footer__menu__link(href="#")
                         | #{subItem}
+    .footer__copyright
+      p.footer__copyright__text
+        | Copyright &copy; 1995-2024 Samsung. All rights reserved.
+    .footer__page-link
+      .footer__language
+        ='\n'
+        a.footer__language__link(href="#")
+          |  Indonesia/Bahasa Indonesia
+      ul.footer__page-link__list
+        li.footer__page-link__item
+          ='\n'
+          a.footer__page-link__link(href="#")
+            | Privasi
+        li.footer__page-link__item
+          ='\n'
+          a.footer__page-link__link(href="#")
+            | Legal
+        li.footer__page-link__item
+          ='\n'
+          a.footer__page-link__link(href="#")
+            | Peta Situs
+    .footer__page-link__sosmed
