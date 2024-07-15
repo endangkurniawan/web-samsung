@@ -1,6 +1,11 @@
 /* ==========================================================================
-   Layouts Index
+   Layouts Footer
    ========================================================================== */
 
-@import "header";
-@import "footer";
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: color(white);
+}

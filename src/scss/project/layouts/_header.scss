@@ -30,7 +30,7 @@ Layout: Example
     flex-shrink: 0;
   }
 
-  .header__menu {
+  &__menu {
     height: 100%;
     display: flex;
     flex-grow: 1;
@@ -168,7 +168,7 @@ Layout: Example
     & > * {
       opacity: 0;
       transform: translateY(-20px);
-      transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s; // Add delay here
+      transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s;
     }
 
     &__box {
@@ -203,6 +203,15 @@ Layout: Example
       &:hover {
         font-weight: bold;
       }
+    }
+
+    &__label {
+      margin-left: 8px;
+      border: 1px solid transparent;
+      padding: 2px;
+      background-color: #2189ff;
+      color: white;
+      border-radius: 20px;
     }
 
     &__featured {

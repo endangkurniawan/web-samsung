@@ -1,0 +1,60 @@
+//-------------------------------------------------------------------------------
+  @name: Footer
+  @description: Layout | Footer
+  -------------------------------------------------------------------------------//
+
+-
+  const footerData = [
+    {
+      title: 'Produk & Layanan',
+      items: ['Smartphones', 'Tablets', 'Audio Sound', 'Watches', 'Smart Switch', 'Aksesoris', 'TVs', 'Lifestyle TV', 'Sound Devices', 'Kulkas', 'Laundry', 'Air Solutions', 'Cooking Appliances', 'Monitors', 'Memory Storage']
+    },
+    {
+      title: 'Shop',
+      items: ['Promo', 'Samsung Trade-In', 'Samsung Experience Store', 'Business Shop', 'Samsung Care', 'FAQ Toko Online', 'Store Pickup', 'Promo Program Pendidikan', 'Corporate Employee Offers', 'Explore', 'Terms & Conditions']
+    },
+    {
+      title: 'Dukungan',
+      items: ['Lihat Chat', 'Reservasi Perbaikan', 'Hubungi Kami', 'Product Registration', 'Pusat Service Center', 'Remote Service', 'Bahasa Isyarat', 'Berikan Tanggapan anda', 'Email to CEO\'s Office']
+    },
+    {
+      title: 'Akun & Komunitas',
+      items: ['Halaman Saya', 'Produk Saya', 'Pesanan', 'Wishlist', 'Voucher', 'Layanan', 'Member']
+    },
+    {
+      title: 'Keberlanjutan',
+      items: ['Lingkungan', 'Keamanan & privasi', 'Aksesibilitas', 'Keragaman kesetaraan inklusi', 'Corporate Citizenship', 'Corporate Sustainability'],
+      subItems: {
+        title: 'Tentang Kami',
+        items: ['Info Perusahaan', 'Area Bisnis', 'Identitas Merek', 'Karier', 'Hubungan Investor', 'Newsroom', 'Etika', 'Desain Samsung']
+      }
+    }
+  ];
+
+
+
+
+//Footer
+.footer
+  .container
+    .footer__nav
+      ul.footer__nav__list
+        each section in footerData
+          li.footer__nav__item
+            .header__nav__box
+              h3.footer__nav__title
+                | #{section.title}
+              ul.footer__menu
+                each item in section.items
+                  li.footer__menu__item
+                    a.footer__menu__link(href="#")
+                      | #{item}
+            if section.subItems
+              .header__nav__box
+                h3.footer__nav__title
+                  | #{section.subItems.title}
+                ul.footer__menu
+                  each subItem in section.subItems.items
+                    li.footer__menu__item
+                      a.footer__menu__link(href="#")
+                        | #{subItem}
