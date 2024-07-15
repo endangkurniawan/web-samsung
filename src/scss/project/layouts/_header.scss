@@ -232,6 +232,12 @@ Layout: Example
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: translateY(-2px);
+          transition: transform 0.3s ease;
+          background-color: #f4f4f4;
+        }
       }
 
       &__link {
