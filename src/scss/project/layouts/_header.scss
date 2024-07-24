@@ -21,6 +21,9 @@ Layout: Example
     height: 100%;
     display: flex;
     align-items: center;
+    @include large {
+      justify-content: space-between;
+    }
   }
 
   &__logo {
@@ -36,9 +39,23 @@ Layout: Example
     height: 100%;
     display: flex;
     justify-content: space-between;
+    @include large {
+      position: absolute;
+      padding-right: 40px;
+      width: 30%;
+      right: 0;
+      bottom: 0;
+      top: 80px;
+      display: block;
+      background-color: red;
+      text-align: right;
+    }
     &__left {
       display: inline-flex;
       align-items: center;
+      @include large {
+        display: block;
+      }
     }
 
     &__button {
@@ -68,6 +85,9 @@ Layout: Example
       margin: 0;
       padding: 0;
       height: 100%;
+      @include large {
+        display: block;
+      }
     }
 
     &__item {
@@ -75,6 +95,9 @@ Layout: Example
       align-items: center;
       height: 100%;
       position: relative;
+      @include large {
+        display: block;
+      }
       &:hover {
         #{$h}__dropdown {
           visibility: visible;
@@ -138,6 +161,10 @@ Layout: Example
       #{$h}__dropdown {
         left: -664px !important;
       }
+    }
+
+    &__utility {
+      display: none;
     }
   }
 
@@ -268,10 +295,6 @@ Layout: Example
 
   &__utility {
     display: flex;
-
-    &__list {
-      display: none;
-    }
 
     &__button {
       padding: 0 8px;

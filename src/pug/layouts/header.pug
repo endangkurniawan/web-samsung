@@ -409,16 +409,8 @@
         dropdowns: []
       }
     ],
-    utility: {
-      search: {
-        text: 'Cari',
-        icon: 'assets/img/icon/Search.svg'
-      },
-      cart: {
-        href: '#',
-        icon: 'assets/img/icon/chart.svg'
-      },
-      login: {
+    menuUtility: [
+      {
         href: '#',
         text: 'Login/Sign-Up',
         icon: 'assets/img/icon/user.svg',
@@ -429,6 +421,16 @@
           { text: 'Members', href: '#' }
         ]
       }
+    ],
+    utility: {
+      search: {
+        text: 'Cari',
+        icon: 'assets/img/icon/Search.svg'
+      },
+      cart: {
+        href: '#',
+        icon: 'assets/img/icon/chart.svg'
+      },
     }
   };
 
@@ -438,7 +440,9 @@
 .header
   .container
     .header__wrapper
+      ='\n'
       a.header__logo(href="#")
+        ='\n'
         img.header__logo__el(src=headerData.logo.src, alt=headerData.logo.alt)
       .header__menu
         .header__menu__left
@@ -460,9 +464,11 @@
                               each feature in dropdown.items
                                 li.header__dropdown__featured__item
                                   .header__dropdown__featured__box
+                                    ='\n'
                                     img(src=feature.imgSrc, alt=feature.text)
                                     p
                                       | !{feature.text}
+                                    ='\n'
                                     a.header__dropdown__featured__link(href=feature.href)
                       else
                         .header__dropdown__box
@@ -472,14 +478,17 @@
                             if dropdown.items
                               each item in dropdown.items
                                 li.header__dropdown__item
+                                  ='\n'
                                   a.header__dropdown__link(href=item.href)
                                     | !{item.text}
                                     if item.label
+                                      ='\n'
                                       span.header__dropdown__label
                                         | !{item.label}
                 else
                   // Menu without dropdowns
                   if menuLeft.title === 'Accesories' || menuLeft.title === 'SmartThings'
+                    ='\n'
                     a.header__menu__link(href="#")
                       | !{menuLeft.title}
         .header__menu__right
@@ -498,25 +507,36 @@
                           if dropdown.items
                             each item in dropdown.items
                               li.header__dropdown__item
+                                ='\n'
                                 a.header__dropdown__link(href=item.href)
                                   | !{item.text}
                 else
+                  ='\n'
                   a.header__menu__link(href="#")
                     | !{menuRight.title}
+        ul.header__menu__utility
+            each item in headerData.menuUtility
+              li.header__menu__utility-item
+                ='\n'
+                a.header__menu__utility-link(href=item.href)
+                  | !{item.text}
+
       .header__utility
         .header__utility__search
           button.header__utility__button
+            ='\n'
             span Cari
+            ='\n'
             img.header__utility__img(src="assets/img/icon/Search.svg", alt="")
         .header__utility__cart
+          ='\n'
           a.header__utility__button(href="#")
+            ='\n'
             img.header__utility__img(src="assets/img/icon/chart.svg", alt="cart")
         .header__utility__login
+          ='\n'
           a.header__utility__button(href="#")
+            ='\n'
             span Login/Sign-Up
+            ='\n'
             img.header__utility__img(src="assets/img/icon/user.svg", alt="")
-          ul.header__utility__list
-            each item in headerData.utility.login.items
-              li.header__utility__item
-                a.header__utility__link(href=item.href)
-                  | !{item.text}
