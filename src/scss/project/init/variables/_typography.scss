@@ -29,7 +29,7 @@ $font: (
   ),
   h6: (
     font-size: 1.6rem,
-    line-height: 2.4rem,
+    line-height: 1.33rem,
   ),
   body: (
     font-size: 1.4rem,
@@ -49,6 +49,10 @@ $font: (
   ),
   x-small: (
     font-size: 1rem,
+    line-height: 1.33rem,
+  ),
+  xx-small: (
+    font-size: 0.8rem,
     line-height: 1.33rem,
   ),
   weight: (

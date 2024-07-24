@@ -3,752 +3,506 @@
   @description: Layout | Header
   -------------------------------------------------------------------------------//
 
+-
+  const headerData = {
+    logo: {
+      src: 'assets/img/logo/Logo-samsung.svg',
+      alt: 'Logo Samsung'
+    },
+    menuLeft: [
+      {
+        title: 'Shop',
+        dropdowns: [
+          {
+            title: 'New & Featured',
+            items: [
+              { text: 'Galaxy M15 5G', href: '#', label: 'BARU' },
+              { text: 'Galaxy Watch FE', href: '#', label: 'BARU' },
+              { text: 'Washer & Drayer', href: '#', label: 'BARU' },
+              { text: 'Galaxy Tab S6 Lite', href: '#', label: 'BARU' },
+              { text: 'Galaxy AI is here', href: '#', label: 'BARU' },
+              { text: 'Bespoke AI', href: '#', label: 'BARU' },
+              { text: 'Samsung Shop App', href: '#' },
+              { text: 'Samsung x You', href: '#' },
+              { text: 'SmarThings', href: '#' },
+              { text: 'Design For Home', href: '#' }
+            ]
+          },
+          {
+            title: 'Offers',
+            items: [
+              { text: 'All Offers', href: '#' },
+              { text: 'Promo Tukar Tambah', href: '#' },
+              { text: 'Deals of the week', href: '#' },
+              { text: 'Galaxy A Series', href: '#' },
+              { text: 'Go Large, Better Gaming Experience', href: '#' },
+              { text: 'Galaxy S24 Series Offers', href: '#' },
+              { text: 'Buy More Save More', href: '#' },
+              { text: 'Digital Appliances Special Promo', href: '#', }
+            ]
+          },
+          {
+            title: 'why buy from Samsung',
+            items: [
+              { text: 'Overview', href: '#' },
+              { text: 'Program Tukar Tambah', href: '#' },
+              { text: 'Free Delivery', href: '#' },
+              { text: 'Bank Promo and 0% Installment', href: '#' },
+              { text: 'Partnership', href: '#' },
+              { text: 'Samsung Care', href: '#' },
+              { text: 'Finance', href: '#' }
+            ]
+          },
+          {
+            title: 'Benefits Program',
+            items: [
+              { text: 'Daftar Program Reseller', href: '#' },
+              { text: 'Daftar EPP (Employe Purchase Program)', href: '#' },
+              { text: 'Daftar UPP (Student Offer)', href: '#' }
+            ]
+          },
+          {
+            title: 'Samsung Experience Store',
+            items: [
+              { text: 'Samsung Experience Store', href: '#' },
+              { text: 'Samsung Live Space', href: '#' },
+              { text: 'Store itemkup and Store', href: '#' },
+              { text: 'SLBS Studio', href: '#' },
+              { text: 'Galaxy AI Zone', href: '#' }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'AI',
+        dropdowns: [
+          {
+            title: '',
+            items: [
+              { text: ' AI for All', href: '#' },
+              { text: 'Galaxy AI', href: '#' },
+              { text: 'Samsung Ai TV', href: '#' },
+              { text: 'Bespoke AI', href: '#' },
+              { text: 'All AI Products', href: '#' }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Mobile',
+        dropdowns: [
+          {
+            items: [
+              { text: 'Discover Mobile', href: '#' },
+              { text: 'Galaxy Ai', href: '#' },
+              { text: 'Galaxy Smartphone', href: '#' },
+              { text: 'Galaxy Tab', href: '#' },
+              { text: 'Galaxy Watch', href: '#' },
+              { text: 'Galaxy Budds', href: '#' },
+              { text: 'Aksesories Galaxy', href: '#' },
+              { text: 'One UI', href: '#' },
+              { text: 'Apps & Services', href: '#' },
+              { text: 'Galaxy Gifts', href: '#' },
+              { text: 'Student Offers', href: '#' },
+              { text: 'Why Galaxy', href: '#' },
+              { text: 'Samsung Health', href: '#' }
+            ]
+          },
+          {
+            title: 'New & Featured',
+            items: [
+              { text: 'Galaxy S24 Ultra', imgSrc: 'assets/img/dummy/galaxyS24.png', href: '#' },
+              { text: 'Galaxy S24 | S24+', imgSrc: 'assets/img/dummy/galaxyS24+.png', href: '#' },
+              { text: 'Galaxy Z Flip5', imgSrc: 'assets/img/dummy/GalaxyZfliv.png', href: '#' },
+              { text: 'Galaxy Z Fold5', imgSrc: 'assets/img/dummy/galaxyZFold.png', href: '#' },
+              { text: 'Galaxy Tab S9 Series', imgSrc: 'assets/img/dummy/GalaxyTab9.png', href: '#' },
+              { text: 'Galaxy Watch6', imgSrc: 'assets/img/dummy/galaxywatch.png', href: '#' },
+              { text: 'Galaxy A55 5G', imgSrc: 'assets/img/dummy/galaxyA55.png', href: '#' },
+              { text: 'Galaxy Buds2 Pro', imgSrc: 'assets/img/dummy/galaxyBuds.png', href: '#' },
+              { text: 'Galaxy Fit3', imgSrc: 'assets/img/dummy/galaxyfit.png', href: '#' }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'TV & AV',
+        dropdowns: [
+           {
+            title: 'Recommended',
+            items: [
+              { text: 'Exclusive TV Bundles', href: '#' },
+              { text: 'Why Samsung TV', href: '#' },
+              { text: 'Why Neo QLED', href: '#' },
+              { text: 'Why Samsung OLED', href: '#' },
+              { text: 'Why 8K TVs', href: '#' },
+              { text: 'Why The Frame', href: '#' },
+              { text: 'Discover Lifestyle TVs', href: '#' },
+              { text: 'Best Samsung Gaming TV', href: '#' },
+              { text: 'Best TV for Sports', href: '#', label: 'NEW' },
+              { text: 'Why Samsung Smart TV', href: '#' },
+              { text: 'Why Micro LED', href: '#' },
+              { text: 'TV Upgrade Offer HOT', href: '#' }
+            ]
+          },
+          {
+            title: 'TVs',
+            items: [
+              { text: 'Discover TVs', href: '#' },
+              { text: 'TV Buying Guide', href: '#' },
+              { text: 'Help Choose My TV', href: '#' },
+              { text: 'Neo QLED ', href: '#', label: 'NEW' },
+              { text: 'QLED ', href: '#' , label: 'NEW'},
+              { text: 'OLED ', href: '#' , label: 'NEW'},
+              { text: 'The Frame ', href: '#' , label: 'NEW'},
+              { text: 'The Serif', href: '#' },
+              { text: 'The Sero', href: '#' },
+              { text: 'Crystal UHD', href: '#', label: 'NEW' },
+              { text: 'TV Accessories', href: '#' },
+              { text: 'All TVs', href: '#' }
+            ]
+          },
+          {
+            title: 'TV by Size',
+            items: [
+              { text: '98”', href: '#' },
+              { text: '85"', href: '#' },
+              { text: '77”', href: '#' },
+              { text: '75"', href: '#' },
+              { text: '65"', href: '#' },
+              { text: '55"', href: '#' },
+              { text: '50"', href: '#' },
+              { text: '43"', href: '#' },
+              { text: '32"', href: '#' },
+              { text: 'What is the Right TV Size?', href: '#' },
+              { text: 'All TVs', href: '#' }
+            ]
+          },
+          {
+            title: 'TV by Resolution',
+            items: [
+              { text: '8K TVs', href: '#' },
+              { text: '4K TVs', href: '#' },
+              { text: 'Full HD/HD TVs', href: '#' }
+            ]
+          },
+          {
+            title: 'Projectors',
+            items: [
+              { text: 'The Premiere', href: '#' },
+              { text: 'The Freestyle', href: '#' },
+              { text: 'All Projectors', href: '#' }
+            ]
+          },
+          {
+            title: 'Sound Devices',
+            items: [
+              { text: 'Discover Sound Devices', href: '#' },
+              { text: 'Soundbar Buying Guide', href: '#' },
+              { text: 'Help Choose My Sound Device', href: '#' },
+              { text: 'Music Frame ', href: '#' , label: 'NEW'},
+              { text: 'Q-Series Soundbars ', href: '#' },
+              { text: 'S-Series All-in-one Soundbar ', href: '#' , label: 'NEW'},
+              { text: 'S-Series Ultra Slim Soundbar ', href: '#' , label: 'NEW'},
+              { text: 'B-series Soundbars ', href: '#', label: 'NEW' },
+              { text: 'Soundbars with Subwoofers', href: '#' },
+              { text: 'Audio Accessories', href: '#' },
+              { text: 'All Sound Devices', href: '#' }
+            ]
+          }
+              ]
+      },
+      {
+        title: 'Home Appliances',
+        dropdowns: [
+          {
+            title: 'Recommended',
+            items: [
+              { text: 'Discover Bespoke AI NEW', href: '#' },
+              { text: 'Bespoke Kitchen Appliances', href: '#' },
+              { text: 'Discover Home Appliances', href: '#' },
+              { text: 'MyBespoke Refrigerator', href: '#' },
+              { text: 'Bespoke Design Studio', href: '#' },
+              { text: 'Design For Home', href: '#' },
+              { text: 'Bespoke Jet™ AI', href: '#' },
+              { text: 'Bespoke AI™ Laundry', href: '#' },
+              { text: 'Home Appliances Buying Guide', href: '#' },
+              { text: 'SmartThings Home', href: '#' }
+            ]
+          },
+          {
+            title: 'Refrigerators',
+            items: [
+              { text: 'All Refrigerators', href: '#' },
+              { text: 'Bespoke Refrigerators', href: '#' },
+              { text: 'Bespoke Infinite Line', href: '#' },
+              { text: 'Bespoke Creators Collection', href: '#' },
+              { text: 'French Door Refrigerators', href: '#' },
+              { text: 'Side-by-Side Refrigerators', href: '#' },
+              { text: 'Bottom Mount Freezers', href: '#' },
+              { text: 'Top Mount Freezers', href: '#' },
+              { text: 'One Door Refrigerators', href: '#' },
+              { text: 'Discover Refrigerators', href: '#' }
+            ]
+          },
+          {
+            title: 'Laundry',
+            items: [
+              { text: 'All Laundry', href: '#' },
+              { text: 'BESPOKE AI™ Laundry NEW', href: '#' },
+              { text: 'Front Load Washers', href: '#' },
+              { text: 'Top Load Washers', href: '#' },
+              { text: 'Washer Dryer Combo', href: '#' },
+              { text: 'Washer & Dryer Bundle', href: '#' },
+              { text: 'Dryers', href: '#' },
+              { text: 'AirDresser', href: '#' },
+              { text: 'Discover Laundry', href: '#' }
+            ]
+          },
+          {
+            title: 'Air Conditioners',
+            items: [
+                { text: 'Discover WindFree™', href: '#' }
+              ],
+          },
+          {
+            title: 'Cooking Appliances',
+            items: [
+              { text: 'All Cooking Appliances', href: '#' },
+              { text: 'Bespoke Cooking Appliances', href: '#' },
+              { text: 'Built-in Oven', href: '#' },
+              { text: 'Hobs', href: '#' },
+              { text: 'Hoods', href: '#' },
+              { text: 'Microwave Ovens', href: '#' },
+              { text: 'Discover Cooking Appliances', href: '#' }
+            ]
+          },
+          {
+            title: 'Dishwashers',
+            items: [
+              { text: 'All Dishwashers', href: '#' },
+              { text: 'Bespoke Dishwashers', href: '#' },
+              { text: 'Freestanding Dishwashers', href: '#' },
+              { text: 'Discover Dishwashers', href: '#' }
+            ]
+          },
+        ]
+      },
+      {
+        title: 'Computing',
+          dropdowns: [
+            {
+              title: 'Recommended',
+              items: [
+                { text: 'Gaming Storage', href: '#' },
+                { text: 'Odyssey Ark', href: '#' },
+                { text: 'Odyssey Gaming Monitors', href: '#' },
+                { text: 'Smart Monitors', href: '#' },
+                { text: 'High Resolution Monitors', href: '#' },
+                { text: 'Computer Monitors', href: '#' },
+                { text: 'Discover Computer Monitors', href: '#' },
+                { text: 'Help choose my monitor NEW', href: '#' },
+                { text: 'Gaming NEW', href: '#' },
+                { text: 'Smart Monitors NEW', href: '#' },
+                { text: 'High Resolution NEW', href: '#' }
+              ]
+            },
+            {
+              title: 'Computer Monitors',
+              items: [
+                { text: 'Curved', href: '#' },
+                { text: 'Flat', href: '#' },
+                { text: 'Business', href: '#' },
+                { text: 'All Computer Monitors', href: '#' }
+              ]
+            },
+            {
+              title: 'Memory & Storage',
+              items: [
+                { text: 'Discover Memory & Storage', href: '#' },
+                { text: 'SSD', href: '#' },
+                { text: 'Portable SSD', href: '#' },
+                { text: 'Memory Cards', href: '#' },
+                { text: 'All Memory & Storage', href: '#' }
+              ]
+            }
+          ]
+      },
+      {
+        title: 'Displays',
+        dropdowns: [
+          {
+            title: 'Computer Monitors',
+            items: [
+              { text: 'Discover Computer Monitors', href: '#' },
+              { text: 'Help choose my monitor NEW', href: '#' },
+              { text: 'Gaming NEW', href: '#' },
+              { text: 'Smart Monitors NEW', href: '#' },
+              { text: 'High Resolution NEW', href: '#' },
+              { text: 'Curved', href: '#' },
+              { text: 'Flat', href: '#' },
+              { text: 'Business', href: '#' },
+              { text: 'All Computer Monitors', href: '#' }
+            ]
+          },
+          {
+            title: 'For Business',
+            items: [
+              { text: 'Smart Signage', href: '#' },
+              { text: 'LED Signage', href: '#' },
+              { text: 'Commercial TVs', href: '#' }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Accesories',
+      },
+      {
+        title: 'SmartThings',
+      }
+    ],
+    menuRight: [
+      {
+        title: 'Support',
+        dropdowns: [
+          {
+            title: 'Dukungan Produk',
+            items: [
+              { text: 'Halaman Dukungan', href: '#' },
+              { text: 'Manual & Software', href: '#' },
+              { text: 'Cari Bantuan', href: '#' },
+              { text: 'FAQ Toko Online', href: '#' }
+            ]
+          },
+          {
+            title: 'Perbaikan & Garansi',
+            items: [
+              { text: 'Informasi Garansi', href: '#' },
+              { text: 'Lokasi Service Center', href: '#' },
+              { text: 'Reservasi Perbaikan', href: '#' },
+              { text: 'Lacak Status Perbaikan', href: '#' },
+              { text: 'Biaya Suku Cadang Smartphone', href: '#' },
+              { text: 'Biaya Pergantian Layar TV', href: '#' },
+              { text: 'Jaminan Service AC 24 Jam', href: '#' }
+            ]
+          },
+          {
+            title: 'Hubungi',
+            items: [
+              { text: 'Chat', href: '#' },
+              { text: 'Email', href: '#' },
+              { text: 'Kontak Kami', href: '#' },
+              { text: 'Bahasa Isyarat', href: '#' }
+            ]
+          },
+          {
+            title: 'Info Tambahan',
+            items: [
+              { text: 'Berita & Pemberitahuan', href: '#' },
+              { text: 'SC+ Service Center', href: '#' }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'For Business',
+        dropdowns: []
+      }
+    ],
+    utility: {
+      search: {
+        text: 'Cari',
+        icon: 'assets/img/icon/Search.svg'
+      },
+      cart: {
+        href: '#',
+        icon: 'assets/img/icon/chart.svg'
+      },
+      login: {
+        href: '#',
+        text: 'Login/Sign-Up',
+        icon: 'assets/img/icon/user.svg',
+        items: [
+          { text: 'Login/Sign-Up', href: '#' },
+          { text: 'Pesanan', href: '#' },
+          { text: 'Product Registration', href: '#' },
+          { text: 'Members', href: '#' }
+        ]
+      }
+    }
+  };
+
+
+
 //-Header
 .header
   .container
     .header__wrapper
       a.header__logo(href="#")
-        ='\n'
-        img.header__logo__el(src="assets/img/logo/Logo-samsung.svg", alt="Logo Samsung")/
+        img.header__logo__el(src=headerData.logo.src, alt=headerData.logo.alt)
       .header__menu
         .header__menu__left
           ul.header__menu__list
-            li.header__menu__item
-              button.header__menu__button
-                | Shop
-              .header__dropdown
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | New & Featured
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy M15 5G
-                        span.header__dropdown__label
-                          | BARU
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy Watch FE
-                        span.header__dropdown__label
-                          | BARU
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Washer & Drayer
-                        span.header__dropdown__label
-                          | BARU
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy Tab S6 Lite
-                        span.header__dropdown__label
-                          | BARU
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy AI is here
-                        span.header__dropdown__label
-                          | BARU
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Bespoke AI
-                        span.header__dropdown__label
-                          | BARU
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Samsung Shop App
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Samsung x You
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | SmarThings
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Design For Home
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Offers
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | All Offers
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Promo Tukar Tambah
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Deals of the week
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy A Series
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Go Large, Better Gaming Experience
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy S24 Series Offers
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Buy More Save More
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Digital Appliances Special Promo
-                        | Free Delivery
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | why buy from Samsung
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Overview
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Program Tukar Tambah
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Free Delivery
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Bank Promo and 0% Installment
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Partnership
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Samsung Care
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Finance
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Benefits Program
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Daftar Program Reseller
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Daftar EPP (Employe Purchase Program)
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Daftar UPP (Student Offer)
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Samsung Experience Store
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Samsung Experience Store
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Samsung Live Space
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Store itemkup and Store
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | SLBS Studio
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy AI Zone
-            li.header__menu__item
-              button.header__menu__button
-                | AI
-              .header__dropdown
-                .header__dropdown__box
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy AI
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Bespoke AI
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | All AI Products
-            li.header__menu__item
-              button.header__menu__button
-                | Mobile
-              .header__dropdown
-                .header__dropdown__box
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Mobile
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy AI
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy Smartphone
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy Tab
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy Watch
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy Budds
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Aksesories Galaxy
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | One UI
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Apps & Services
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Galaxy Gifts
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Student Offers
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Why Galaxy
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Samsung Health
-                .header__dropdown__box.header__dropdown__featured
-                  h3.header__dropdown__title
-                    | New & Featured
-                  ul.header__dropdown__list.header__dropdown__featured__list
-                    li.header__dropdown__featured__item
-                      .header__dropdown__featured__box(href="#")
-                        img(src="assets/img/dummy/galaxyS24.png", alt="Galaxy S24 Ultra")
-                        p
-                          | Galaxy S24 Ultra
-                        a.header__dropdown__featured__link(href="#")
-                    li.header__dropdown__featured__item
-                      .header__dropdown__featured__box(href="#")
-                        img(src="assets/img/dummy/galaxyS24+.png", alt="Galaxy S24 Ultra")
-                        p
-                          | Galaxy S24 | S24+
-                        a.header__dropdown__featured__link(href="#")
-                    li.header__dropdown__featured__item
-                      .header__dropdown__featured__box(href="#")
-                        img(src="assets/img/dummy/GalaxyZfliv.png", alt="Galaxy S24 Ultra")
-                        p
-                          | Galaxy Z Flip5
-                        a.header__dropdown__featured__link(href="#")
-                    li.header__dropdown__featured__item
-                      .header__dropdown__featured__box(href="#")
-                        img(src="assets/img/dummy/galaxyZFold.png", alt="Galaxy S24 Ultra")
-                        p
-                          | Galaxy Z Fold5
-                        a.header__dropdown__featured__link(href="#")
-                    li.header__dropdown__featured__item
-                      .header__dropdown__featured__box(href="#")
-                        img(src="assets/img/dummy/GalaxyTab9.png", alt="Galaxy S24 Ultra")
-                        p
-                          | Galaxy Tab S9 Series
-                        a.header__dropdown__featured__link(href="#")
-                    li.header__dropdown__featured__item
-                      .header__dropdown__featured__box(href="#")
-                        img(src="assets/img/dummy/galaxywatch.png", alt="Galaxy S24 Ultra")
-                        p
-                          | Galaxy Watch6
-                        a.header__dropdown__featured__link(href="#")
-                    li.header__dropdown__featured__item
-                      .header__dropdown__featured__box(href="#")
-                        img(src="assets/img/dummy/galaxyA55.png", alt="Galaxy S24 Ultra")
-                        p
-                          | Galaxy A55 5G
-                        a.header__dropdown__featured__link(href="#")
-                    li.header__dropdown__featured__item
-                      .header__dropdown__featured__box(href="#")
-                        img(src="assets/img/dummy/galaxyBuds.png", alt="Galaxy S24 Ultra")
-                        p
-                          | Galaxy Buds2 Pro
-                        a.header__dropdown__featured__link(href="#")
-                    li.header__dropdown__featured__item
-                      .header__dropdown__featured__box(href="#")
-                        img(src="assets/img/dummy/galaxyfit.png", alt="Galaxy S24 Ultra")
-                        p
-                          | Galaxy Fit3
-                        a.header__dropdown__featured__link(href="#")
-            li.header__menu__item
-              button.header__menu__button
-                | TV & AV
-              .header__dropdown
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Rekomendasi
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Help Me Choose my Tv
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Help Me Choose my Sound Device
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Mengapa Neon Qled
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Mengapa The Frame
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Whay Samsung Smart Tv
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | All About TV
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | TVs
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Tvs
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Neon QLED
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | OLED
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | QLED
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Crystal UHD
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Discover Lifestyle TVS
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | The Frame
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | The Serif
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | The Sero
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Aksesories Tv
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Semua TV
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | TV Berdasarkan Ukuran
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | 98"
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | 85"
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | 75"
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | 65"
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | 55"
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | 50"
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | 43"
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | 32"
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Ukuran TV yang Cocok
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Why Super Big Tv
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Semua TV berdasarkan Ukuran
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | TV Berdasarkan Resolusi
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | 8K TVs
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | 4K TVs
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Full HD| HD TVs
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Projectors
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | The Premiere
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | The Freestyle
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Aksesori Projector
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Sound Devices
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Sound Devices
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Qris Soundbar
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | All in One Soundbars
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Soundbars with Subwooper
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Sound Tower
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Semua Sound Devices
-            li.header__menu__item
-              button.header__menu__button
-                | Home Appliances
-              .header__dropdown
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Rekomendasi
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Discover BESPOKE AI
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | in The Mood For Food
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Discover Home Appliances
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Kulkas Ungkep
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Samsung Food
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Appliances Buying Guide
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Desine For Home
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Kulkas
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Semua Kulkas
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | BESPOKE Refrigerators
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Kulkas Multi door
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Kulkas Side by Side
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Kulkas 2 Pintu
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Aksesoris
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Kulkas
-                    li.header__dropdown_
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Mesin Cuci
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Semua Mesin Cuci
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | BESPOKE AI Combo
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | BESPOKE AirDresser
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Mesin Cuci Front Loading
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Mesin Cuci Top Loading
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Washer Dryer Package
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Dryers
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Mesin Cuci twin Club
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Aksesories
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan mesin Cuci
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Vacuum Cleaners
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Semua Vacuum Cleaners
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Stick Vacuum
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Robot Vacuum
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Canister Vacuum
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Aksesories                .header__dropdown__box
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Vacuum Cleaners
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Cooking Appliances
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Semua Cooking Appliances
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Solo Microwave
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Grill Microwave
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | BESPOKE Microwave
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Cooking Appliances
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Air Conditioners
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Semua Air Conditioners
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | WindFree
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Air Conditioners
-                    h3.header__dropdown__title
-                      | Air Purifier
-                    ul.header__dropdown__list
-                      li.header__dropdown__item
-                        a.header__dropdown__link(href="#")
-                          | Semua Air Purifier
-                      li.header__dropdown__item
-                        a.header__dropdown__link(href="#")
-                          | BESPOKE Cube
-                      li.header__dropdown__item
-                        a.header__dropdown__link(href="#")
-                          | Filter & Akesories
-                      li.header__dropdown__item
-                        a.header__dropdown__link(href="#")
-                          | Temukan Air Purifier
-            li.header__menu__item
-              button.header__menu__button
-                | Computing
-              .header__dropdown
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Rekomendasi
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Odyssey Ark
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Odyseey Gaming Monitor
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Smart Monitor
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | High Resolution Monitor
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Chromebook
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Chromebook
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Chromebook 4
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Monitors
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Monitors
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Gaming
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Smart Monitor
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | High Resolution Monitor
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Curved
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Profesional
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Semua Monitors
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Memory & Storage
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Temukan Memory & Storage
-            li.header__menu__item
-              button.header__menu__button
-                | Displays
-              .header__dropdown
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Monitors
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Discover Monitors
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Help choose my monitor
-                        span.header__dropdown__label
-                          | BARU
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | All Monitors
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | For Business
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Smart Signage
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | LED Signage
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Commercial TVs
-            li.header__menu__item
-              a.header__menu__link(href="#")
-                | Accesories
-            li.header__menu__item
-              a.header__menu__link(href="#")
-                | SmarThings
+            each menuLeft in headerData.menuLeft
+              li.header__menu__item
+                if menuLeft.dropdowns && menuLeft.dropdowns.length > 0
+                  button.header__menu__button
+                    | !{menuLeft.title}
+                  .header__dropdown
+                    each dropdown in menuLeft.dropdowns
+                      if menuLeft.title === 'Mobile' && dropdown.title === 'New & Featured'
+                        // handling for 'New & Featured' under 'Mobile'
+                        .header__dropdown__box.header__dropdown__featured
+                          h3.header__dropdown__title
+                            | !{dropdown.title}
+                          ul.header__dropdown__list.header__dropdown__featured__list
+                            if dropdown.items
+                              each feature in dropdown.items
+                                li.header__dropdown__featured__item
+                                  .header__dropdown__featured__box
+                                    img(src=feature.imgSrc, alt=feature.text)
+                                    p
+                                      | !{feature.text}
+                                    a.header__dropdown__featured__link(href=feature.href)
+                      else
+                        .header__dropdown__box
+                          h3.header__dropdown__title
+                            | !{dropdown.title}
+                          ul.header__dropdown__list
+                            if dropdown.items
+                              each item in dropdown.items
+                                li.header__dropdown__item
+                                  a.header__dropdown__link(href=item.href)
+                                    | !{item.text}
+                                    if item.label
+                                      span.header__dropdown__label
+                                        | !{item.label}
+                else
+                  // Menu without dropdowns
+                  if menuLeft.title === 'Accesories' || menuLeft.title === 'SmartThings'
+                    a.header__menu__link(href="#")
+                      | !{menuLeft.title}
         .header__menu__right
           ul.header__menu__list
-            li.header__menu__item
-              button.header__menu__button
-                | Support
-              .header__dropdown
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Dukungan Produk
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Halaman Dukugan
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Manual & Software
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Cari Bantuan
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | FAQ Toko Online
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Perbaikan & Garansi
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Informasi Garansi
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Lokasi Service Center
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Reservasi Perbaikan
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Lacak Status Perbaikan
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Biaya Suku Cadang Smartphone
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Biaya Pergantian Layar TV
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Jaminan Service AC 24 Jam
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Hubungi
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Chat
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Email
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Kontak Kami
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Bahasa Isyarat
-                .header__dropdown__box
-                  h3.header__dropdown__title
-                    | Info Tambahan
-                  ul.header__dropdown__list
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | Berita & Pemberitahuan
-                    li.header__dropdown__item
-                      a.header__dropdown__link(href="#")
-                        | SC+ Service Center
-            li.header__menu__item
-              a.header__menu__link
-                | For Business
+            each menuRight in headerData.menuRight
+              li.header__menu__item
+                if menuRight.dropdowns && menuRight.dropdowns.length > 0
+                  button.header__menu__button
+                    | !{menuRight.title}
+                  .header__dropdown
+                    each dropdown in menuRight.dropdowns
+                      .header__dropdown__box
+                        h3.header__dropdown__title
+                          | !{dropdown.title}
+                        ul.header__dropdown__list
+                          if dropdown.items
+                            each item in dropdown.items
+                              li.header__dropdown__item
+                                a.header__dropdown__link(href=item.href)
+                                  | !{item.text}
+                else
+                  a.header__menu__link(href="#")
+                    | !{menuRight.title}
       .header__utility
         .header__utility__search
           button.header__utility__button
@@ -762,15 +516,7 @@
             span Login/Sign-Up
             img.header__utility__img(src="assets/img/icon/user.svg", alt="")
           ul.header__utility__list
-            li.header__utility__item
-              a.header__utility__link(href="#")
-                | Login/Sign-Up
-            li.header__utility__item
-              a.header__utility__link(href="#")
-                | Pesanan
-            li.header__utility__item
-              a.header__utility__link(href="#")
-                | Product Registration
-            li.header__utility__item
-              a.header__utility__link(href="#")
-                | Members
+            each item in headerData.utility.login.items
+              li.header__utility__item
+                a.header__utility__link(href=item.href)
+                  | !{item.text}

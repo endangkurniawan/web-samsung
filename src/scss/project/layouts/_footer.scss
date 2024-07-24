@@ -3,13 +3,17 @@
    ========================================================================== */
 
 .footer {
+  $ft: &;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: zi(footer);
   background-color: color(white);
   padding: 40px 0 20px;
-
+  @include small {
+    position: relative;
+  }
   .container {
     @include large {
       width: 100%;
@@ -22,6 +26,10 @@
       display: flex;
       padding: 0;
       margin: 0;
+
+      @include x-small {
+        display: block;
+      }
     }
     &__item {
       width: 20%;
@@ -29,6 +37,11 @@
       display: block;
       border-right: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
+
+      @include x-small {
+        border: 0;
+        width: 100%;
+      }
     }
     &__title {
       margin: 0;
@@ -39,6 +52,47 @@
       @include large {
         @include font-size(body);
       }
+
+      @include medium {
+        @include font-size(x-small);
+        padding: 12px 16px;
+      }
+      @include x-small {
+        position: relative;
+        &::after {
+          content: "";
+          display: block;
+          width: 16px;
+          height: 16px;
+          background-image: url(../img/icon/chevron.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          right: 4px;
+          top: 14px;
+          transform: rotateX(180deg);
+          position: absolute;
+          transition: transform 0.3s ease;
+        }
+      }
+      @include x-small {
+        margin: 0 16px;
+        border-bottom: 1px solid #ccc;
+        @include font-size(h6);
+        padding: 16px 0;
+      }
+    }
+    &--active {
+      #{$ft} {
+        &__nav__title::after {
+          transform: none;
+          transition: transform 0.3s ease;
+        }
+        &__menu__item {
+          opacity: 1;
+          transform: none;
+          transition-delay: 200ms;
+        }
+      }
     }
   }
   &__menu {
@@ -46,6 +100,19 @@
     padding: 0;
     &__item {
       padding: 8px 24px;
+
+      @include medium {
+        padding: 4px 16px;
+      }
+
+      @include x-small {
+        @include medium {
+          opacity: 0;
+          transform: translateY(-20px);
+          transition: all 0.3s ease;
+        }
+        padding: 12px 0 12px 32px;
+      }
     }
     &__link {
       @include font-size(small);
@@ -70,6 +137,17 @@
       &:hover {
         color: #458ff6;
       }
+
+      @include medium {
+        @include font-size(xx-small);
+      }
+
+      @include x-small {
+        @include font-size(small);
+      }
+    }
+    @include x-small {
+      display: none;
     }
   }
 
@@ -82,22 +160,36 @@
     @include large {
       min-height: 56px;
     }
+    @include x-small {
+      border-bottom: 0;
+      padding: 32px 16px;
+    }
     &__text {
       @include font-size(small);
       margin: 0;
       @include large {
         @include font-size(x-small);
       }
+      @include medium {
+        @include font-size(xx-small);
+      }
+      @include x-small {
+        @include font-size(small);
+      }
     }
   }
 
   &__page-link {
     width: 100%;
-    height: 64px;
-    padding-left: 24px;
+    padding: 32px 0 32px 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    @include x-small {
+      display: block;
+      padding-left: 16px;
+      padding: 0 16px;
+    }
 
     &__section {
       display: flex;
@@ -106,6 +198,7 @@
     }
 
     &__language {
+      order: 1;
       padding-right: 24px;
       &-link {
         text-decoration: none;
@@ -113,6 +206,9 @@
         font-weight: fw(bold);
         @include large {
           @include font-size(x-small);
+        }
+        @include x-small {
+          @include font-size(small);
         }
         &::after {
           content: "";
@@ -123,13 +219,20 @@
           margin-left: 24px;
         }
       }
+      @include x-small {
+        margin-bottom: 24px;
+      }
     }
 
     &__list {
+      order: 2;
       display: flex;
       list-style: none;
       padding: 0;
       margin: 0;
+      @include x-small {
+        justify-content: center;
+      }
     }
 
     &__link {
@@ -139,6 +242,18 @@
       position: relative;
       &:first-child {
         padding-left: 0;
+      }
+
+      @include large {
+        @include font-size(x-small);
+      }
+
+      @include medium {
+        @include font-size(xx-small);
+      }
+
+      @include x-small {
+        @include font-size(small);
       }
 
       &::after {
@@ -160,10 +275,6 @@
       &:hover {
         color: #458ff6;
       }
-
-      @include large {
-        @include font-size(x-small);
-      }
     }
 
     &__text {
@@ -173,13 +284,31 @@
       @include large {
         @include font-size(x-small);
       }
+
+      @include medium {
+        @include font-size(xx-small);
+      }
+
+      @include x-small {
+        text-align: center;
+        @include font-size(small);
+        padding: 8px 0 16px;
+        margin: 0;
+      }
     }
 
     &__sosmed {
-      height: 100%;
+      flex-grow: 8;
+      order: 3;
+      justify-content: right;
       display: flex;
       align-items: center;
       margin-right: 24px;
+      @include x-small {
+        display: block;
+        margin: 0;
+        padding-bottom: 16px;
+      }
       &__link {
         display: block;
         width: 24px;
@@ -187,6 +316,11 @@
         @include large {
           width: 12px;
           height: 12px;
+        }
+
+        @include x-small {
+          width: 24px;
+          height: 24px;
         }
         & img {
           width: 100%;
@@ -199,6 +333,9 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        @include x-small {
+          justify-content: center;
+        }
       }
 
       &__item {
