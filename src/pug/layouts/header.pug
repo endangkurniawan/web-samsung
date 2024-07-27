@@ -410,17 +410,23 @@
       }
     ],
     menuUtility: [
-      {
-        href: '#',
-        text: 'Login/Sign-Up',
-        icon: 'assets/img/icon/user.svg',
-        items: [
-          { text: 'Login/Sign-Up', href: '#' },
-          { text: 'Pesanan', href: '#' },
-          { text: 'Product Registration', href: '#' },
-          { text: 'Members', href: '#' }
-        ]
-      }
+        {
+          text: 'Order',
+          link: '#'
+        },
+        {
+          text: 'Product Registration',
+          link: '#'
+        },
+        {
+          text: 'Members',
+          link: '#'
+        },
+        {
+          text: 'Samsung Rewards',
+          link: '#'
+        },
+
     ],
     utility: {
       search: {
@@ -445,6 +451,12 @@
         ='\n'
         img.header__logo__el(src=headerData.logo.src, alt=headerData.logo.alt)
       .header__menu
+        .header__menu__before-login
+          button.header__button__search
+            img(src="assets/img/icon/Search.svg", alt="button search")/
+          button.header__button__search-control
+          button.header_button__close
+            img(src="assets/img/icon/close.svg", alt="icon close")/
         .header__menu__left
           ul.header__menu__list
             each menuLeft in headerData.menuLeft
@@ -515,11 +527,11 @@
                   a.header__menu__link(href="#")
                     | !{menuRight.title}
         ul.header__menu__utility
-            each item in headerData.menuUtility
+            each items in headerData.menuUtility
               li.header__menu__utility-item
                 ='\n'
-                a.header__menu__utility-link(href=item.href)
-                  | !{item.text}
+                a.header__menu__utility-link(href=items.link)
+                  | !{items.text}
 
       .header__utility
         .header__utility__search
@@ -540,3 +552,11 @@
             span Login/Sign-Up
             ='\n'
             img.header__utility__img(src="assets/img/icon/user.svg", alt="")
+        button.burger-menu.js-burger-menu
+          ='\n'
+          span.burger-menu__bar
+          ='\n'
+          span.burger-menu__bar
+          ='\n'
+          span.burger-menu__bar
+          ='\n'
