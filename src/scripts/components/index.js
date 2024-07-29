@@ -3,7 +3,8 @@
 @description: Indexing all components
 --------------------------------------------------------------------------------- */
 
+import Header from "./Header";
 import Footer from "./Footer";
 import WindowResize from "./WindowResize";
 
-export { Footer, WindowResize };
+export { Header, Footer, WindowResize };

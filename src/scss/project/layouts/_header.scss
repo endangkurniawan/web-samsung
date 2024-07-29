@@ -46,21 +46,86 @@
     justify-content: space-between;
     @include large {
       position: fixed;
-      padding: 0 48px 0 24px;
+      padding: 0 16px 0 24px;
       width: 360px;
       right: 0;
       bottom: 0;
       top: 0;
       display: block;
       background-color: color(white);
+      overflow-x: auto;
+      transform: translateX(100%);
+      transform-origin: top center;
+      transition: transform 0.45s ease 700ms;
+      .show-menu & {
+        transform: none;
+        transition: transform 0.5s ease 100ms;
+      }
     }
 
     &__before-login {
       display: none;
       @include large {
+        padding: 8px 0;
         display: block;
         width: 100%;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & button {
+          position: relative;
+          &:nth-child(1) {
+            display: none;
+            border: 0;
+            background-color: transparent;
+            & img {
+              display: block;
+              height: 36px;
+              width: 40px;
+            }
+          }
+          &:nth-child(2) {
+            // margin-left: 16px;
+            border: transparent;
+            border-radius: 20px;
+            width: 100%;
+            background-color: #f7f7f7;
+            & img {
+              display: block;
+              padding: 8px 16px;
+            }
+          }
+          &:nth-child(3) {
+            border: 0;
+            background-color: transparent;
+            & img {
+              width: 40px;
+              height: 36px;
+            }
+          }
+        }
+      }
+    }
+
+    &__account {
+      display: none;
+      @include large {
+        display: block;
+        padding: 16px 0 32px;
+        &-link {
+          text-decoration: none;
+          @include font-size(label);
+        }
+        &-text {
+          @include font-size(small);
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: color(tertiary);
+        }
       }
     }
 
@@ -69,6 +134,14 @@
       align-items: center;
       @include large {
         display: block;
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: color(tertiary);
+          margin-top: 16px;
+        }
       }
     }
 
@@ -76,14 +149,34 @@
       padding: 0 8px;
       background-color: transparent;
       border: none;
-      @include font-size(label);
+      @include font-size(body);
       color: color(black);
-      font-weight: bold;
+      font-weight: fw(bold);
       border-radius: 16px;
       cursor: pointer;
       &:hover {
         background-color: color(black);
         color: color(white);
+      }
+      @include large {
+        padding: 0;
+        font-weight: fw(regular);
+        @include font-size(label);
+        width: 100%;
+        text-align: left;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 14px;
+          height: 14px;
+          background-image: url(../img/icon/chevron.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          right: 8px;
+          top: 14px;
+          transform: rotate(90deg);
+        }
       }
     }
 
@@ -91,6 +184,19 @@
       display: inline-flex;
       align-items: center;
       justify-content: right;
+      @include large {
+        width: 100%;
+        display: block;
+        padding-top: 32px;
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: color(tertiary);
+          margin-top: 16px;
+        }
+      }
     }
 
     &__list {
@@ -111,6 +217,7 @@
       position: relative;
       @include large {
         display: block;
+        left: 0;
       }
       &:hover {
         #{$h}__dropdown {
@@ -161,7 +268,7 @@
     &__link {
       padding: 0 8px;
       text-decoration: none;
-      @include font-size(label);
+      @include font-size(body);
       font-weight: bold;
       color: color(black);
       border-radius: 16px;
@@ -169,6 +276,12 @@
       &:hover {
         background-color: color(black);
         color: color(white);
+      }
+
+      @include large {
+        @include font-size(label);
+        font-weight: fw(regular);
+        padding: 0;
       }
     }
     &__right {
@@ -192,9 +305,9 @@
       &-link {
         @include large {
           text-decoration: none;
-          @include font-size(body);
-          font-weight: fw(bold);
-          padding: 0 8px;
+          @include font-size(label);
+          font-weight: fw(regular);
+          padding: 0;
         }
       }
     }
@@ -214,6 +327,14 @@
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
     z-index: zi(dropdown);
+
+    @include large {
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      border-radius: 0;
+    }
+
     &::before {
       content: "";
       display: block;
@@ -223,12 +344,18 @@
       position: absolute;
       top: 24px;
       opacity: 0.7;
+      @include large {
+        display: none;
+      }
     }
-
     & > * {
       opacity: 0;
       transform: translateY(-20px);
       transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s;
+    }
+
+    &__title-content {
+      display: none;
     }
 
     &__box {

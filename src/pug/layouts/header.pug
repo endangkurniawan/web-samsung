@@ -452,11 +452,21 @@
         img.header__logo__el(src=headerData.logo.src, alt=headerData.logo.alt)
       .header__menu
         .header__menu__before-login
+          button.header__button_prev
+            ='\n'
+            img(src="assets/img/icon/arrow-left.png", alt="icon arrow left")/
           button.header__button__search
+            ='\n'
             img(src="assets/img/icon/Search.svg", alt="button search")/
-          button.header__button__search-control
-          button.header_button__close
-            img(src="assets/img/icon/close.svg", alt="icon close")/
+          button.header_button__close.js-close-showMenu
+            ='\n'
+            img(src="assets/img/icon/close.png", alt="icon close")/
+        .header__menu__account
+          a.header__menu__account-link(href="#")
+            | Login/ Sign Up
+          p.header__menu__account-text
+            a.header__menu__account-text-link
+              | Why Create a Samsung Account
         .header__menu__left
           ul.header__menu__list
             each menuLeft in headerData.menuLeft
@@ -465,6 +475,8 @@
                   button.header__menu__button
                     | !{menuLeft.title}
                   .header__dropdown
+                    h6.header__dropdown__title-content
+                      | !{menuLeft.title}
                     each dropdown in menuLeft.dropdowns
                       if menuLeft.title === 'Mobile' && dropdown.title === 'New & Featured'
                         // handling for 'New & Featured' under 'Mobile'
